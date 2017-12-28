@@ -46,7 +46,7 @@ a) Tworzenie użytkowników
 
 W tym celu proszę - dla każdego użytkownika - wykonać w bazie następujące zapytanie SQL.
 
-INSERT INTO Users VALUES ('<user_id>', '<user_email>', '<hashed_password>', '<username>');
+INSERT INTO Users VALUES ('<user_id>', '<user_email>', '<hashed_password>', '<user_name>');
 
 Wartością parametru "user_id" powinien być ciąg znaków - tzw. GUID / UUID. Można go wygenerować np. na stronie:
 
@@ -56,7 +56,7 @@ Wartością parametru "hashed_password" jest hasło PO ZASZYFROWANIU metodą SHA
 
 http://passwordsgenerator.net/sha256-hash-generator/
 
-Parametry "user_email" oraz "username" ustawiamy według własnego życzenia.
+Parametry "user_email" oraz "user_name" ustawiamy według własnego życzenia.
 
 b) Role użytkowników
 
