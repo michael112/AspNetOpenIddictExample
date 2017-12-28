@@ -15,6 +15,7 @@ W nagłówku zapytania musimy podać parametr Authorization, który przyjmuje wa
 - język programowania C#
 - środowisko .NET Core 2.0
 - biblioteka OpenIddict (https://github.com/openiddict/openiddict-core)
+
 NIE używałem frameworku ASP.NET Core Identity, ponieważ klasa IdentityUser ma zbyt dużo niepotrzebnych pól, które zaśmiecałyby bazę danych.
 
 ## Wymagania techniczne
@@ -48,9 +49,13 @@ W tym celu proszę - dla każdego użytkownika - wykonać w bazie następujące 
 INSERT INTO Users VALUES ('<user_id>', '<user_email>', '<hashed_password>', '<username>');
 
 Wartością parametru "user_id" powinien być ciąg znaków - tzw. GUID / UUID. Można go wygenerować np. na stronie:
+
 https://www.guidgenerator.com/online-guid-generator.aspx
+
 Wartością parametru "hashed_password" jest hasło PO ZASZYFROWANIU metodą SHA-256. Przykładowy generator online:
+
 http://passwordsgenerator.net/sha256-hash-generator/
+
 Parametry "user_email" oraz "username" ustawiamy według własnego życzenia.
 
 b) Role użytkowników
@@ -68,10 +73,13 @@ Odpowiada za to tabela łącząca UserRoleJoin.
 INSERT INTO UserRoleJoin VALUES('<join_id>', '<role_id>', '<user_id>');
 
 Wartości parametrów "role_id" oraz "user_id" muszą być identyczne co identyfikatory odpowiednio roli i użytkownika, któremu chcemy daną rolę nadać.
+
 Z kolei w miejscu "join_id" wpisujemy dowolny GUID (UUID). Istnienie tego identyfikatora jest pewnego rodzaju usterką systemu. Prawidłowym jego działaniem byłoby, gdyby identyfikatorem tabeli była kombinacja wartości "role_id" i "user_id". Poprawię to, jeśli znajdę czas.
 
 ## Uruchamianie aplikacji
 
 Proszę wpisać do konsoli:
+
 dotnet run
+
 Można też skorzystać z IDE, np. JetBrains Rider czy MS Visual Studio.
