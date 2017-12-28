@@ -63,7 +63,9 @@ b) Role użytkowników
 Użytkownik może występować jako "user", "admin", lub mieć jednocześnie obie te role.
 
 Musimy najpierw umieścić je w bazie danych:
+
 INSERT INTO Roles VALUES('225baeb0-bed5-4a03-987d-082a272bd32f', 'User');
+
 INSERT INTO Roles VALUES('85ec8be5-8108-44ed-b363f3df765db495', 'Admin');
 
 c) Przydzielanie ról użytkownikom
