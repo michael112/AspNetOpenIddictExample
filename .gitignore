@@ -1,0 +1,6 @@
+.vs
+.idea
+AspNetOpenIddictExample/[Oo]bj/
+AspNetOpenIddictExample/[Bb]in/
+AspNetOpenIddictExample/Migrations/
+AspNetOpenIddictExample/appsettings-nogit.json
