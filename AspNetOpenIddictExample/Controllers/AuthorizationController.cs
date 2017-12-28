@@ -9,9 +9,6 @@ using Rework;
 
 using AspNetIdentityExample.Models;
 using AspNetIdentityExample.Stores.User;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.CodeAnalysis.Diagnostics;
 
 namespace AuthorizationServer.Controllers
 {
